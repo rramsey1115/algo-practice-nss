@@ -52,13 +52,13 @@ export const NavBar = () => {
     <Box sx={{
       width: '100vw',
       minWidth: "380px",
-      bgcolor: "#2c3e50",
-      padding: "4px",
+      bgcolor: "#212121",
+      padding: "6px 0px",
       position: 'fixed',
       top: 0,
       left: 0,
       boxSizing: "border-box",
-      borderBottom: "1px solid black"
+      borderBottom: "1px solid whitesmoke"
     }}>
       <Tabs
         value={value}
@@ -68,25 +68,25 @@ export const NavBar = () => {
         allowScrollButtonsMobile
         aria-label="nav tabs"
         role="navigation"
-        indicatorColor='secondary'
-        textColor='secondary'
+        indicatorColor='inherit'
+        textColor='whitesmoke'
         sx={{
           '& .MuiTab-root': {
-            color: 'inherit', // Default color
+            color: 'inherit', 
             fontFamily: 'inherit',
             textTransform: 'none',
             fontSize: "1rem",
             fontWeight: 400,
             '&:hover': {
-              color: (theme) => theme.palette.secondary.light, // Use MUI secondary on hover
+              color: (theme) => theme.palette.success.light, 
             },
           },
           '& .Mui-selected': {
-            color: (theme) => theme.palette.secondary.light, // Use MUI secondary for selected tab
+            color: (theme) => theme.palette.success.light,
             fontWeight: 500
           },
           '& .MuiTabs-indicator': {
-            backgroundColor: (theme) => theme.palette.secondary.light, // Optional: match indicator
+            backgroundColor: (theme) => theme.palette.success.light,
           },
           '& .MuiTabs-scrollButtons': {
             color: 'whitesmoke',
