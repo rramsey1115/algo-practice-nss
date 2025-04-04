@@ -20,22 +20,22 @@ function samePageLinkNavigation(event) {
 }
 
 function LinkTab(props) {
-    return (
-      <Tab
-        component={Link}
-        to={props.to}
-        aria-current={props.selected && 'page'}
-        {...props}
-      />
-    );
-  }
-  
+  return (
+    <Tab
+      component={Link}
+      to={props.to}
+      aria-current={props.selected && 'page'}
+      {...props}
+    />
+  );
+}
+
 
 LinkTab.propTypes = {
   selected: PropTypes.bool,
 };
 
-export default function NavBar() {
+export const NavBar = () => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -49,7 +49,17 @@ export default function NavBar() {
   };
 
   return (
-    <Box sx={{ width: '80vw' }}>
+    <Box sx={{
+      width: '100vw',
+      minWidth: "380px",
+      bgcolor: "#2c3e50",
+      padding: "4px",
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      boxSizing: "border-box",
+      borderBottom: "1px solid black"
+    }}>
       <Tabs
         value={value}
         onChange={handleChange}
@@ -58,6 +68,31 @@ export default function NavBar() {
         allowScrollButtonsMobile
         aria-label="nav tabs"
         role="navigation"
+        indicatorColor='secondary'
+        textColor='secondary'
+        sx={{
+          '& .MuiTab-root': {
+            color: 'inherit', // Default color
+            fontFamily: 'inherit',
+            textTransform: 'none',
+            fontSize: "1rem",
+            fontWeight: 400,
+            '&:hover': {
+              color: (theme) => theme.palette.secondary.light, // Use MUI secondary on hover
+            },
+          },
+          '& .Mui-selected': {
+            color: (theme) => theme.palette.secondary.light, // Use MUI secondary for selected tab
+            fontWeight: 500
+          },
+          '& .MuiTabs-indicator': {
+            backgroundColor: (theme) => theme.palette.secondary.light, // Optional: match indicator
+          },
+          '& .MuiTabs-scrollButtons': {
+            color: 'whitesmoke',
+          }
+        }}
+
       >
         <LinkTab label="Home" to="/" />
         <LinkTab label="Sum of Multiples" to="/multiples" />
