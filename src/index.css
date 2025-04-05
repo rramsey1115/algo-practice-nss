@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -13,14 +13,56 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root {
-  margin: 60px auto;
+body {
+  margin: 0 auto;
+  display: flex;
+  width: 90vw;
+  justify-content: center;
+  min-width: 380px;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-body {
-  margin:0;
+#root {
+  width: 100%;
+}
+
+header {
+  margin: 60px 0 0px 0;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+.main {
+  width: 99%;
+  margin: 0px auto;
+  min-width: 330px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  min-width: 340px;
-  min-height: 100vh;
+  align-items: center;
+  text-align: left;
+}
+
+.article {
+  width: inherit;
+}
+
+.article-heading {
+  font-size: 1.5rem;
+  border-bottom: 1px solid whitesmoke;
+  margin: 10px 0;
+}
+
+.article-div {
+  margin: 1em auto 2em auto;
+  padding: 16px 8px;
+  background-color: #ffffff1b;
+  border-radius: 16px;
 }

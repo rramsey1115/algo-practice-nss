@@ -53,7 +53,7 @@ export const NavBar = () => {
       sx={{
         width: {
           xs: '100vw', // full width on mobile
-          md: '85vw',  // 90% width on small screens and up
+          md: '90vw',  // 90% width on small screens and up
         },
         minWidth: '330px',
         bgcolor: '#212121',
@@ -62,7 +62,7 @@ export const NavBar = () => {
         top: 0,
         left: {
           xs: 0,
-          md: '5vw',
+          md: '4.25vw',
         },
         boxSizing: 'border-box',
         borderBottom: '1px solid whitesmoke',
