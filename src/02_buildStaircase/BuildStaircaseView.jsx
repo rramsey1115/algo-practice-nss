@@ -48,19 +48,19 @@ export const BuildStaircaseView = () => {
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Approach</h2>
-                <p>My first impression is to make this interactive, so that the user controls the 'n' number input. This also means instead of printing to console, I will contruct my function to return the outcome to the DOM.</p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
+                <p>My initial impression is to make this interactive, so the user controls the 'n' number of stairs. This also means instead of printing to console, I will construct my function to return the outcome to the DOM.</p>
+                <p>The solution was simple, however, most of my time was spent making sure the formatting of my string was correct, and validating user input to avoid buggy behaviors. The React/UI portion of this challenge took way longer than the algorithmic problem.</p>
+                <p>I decided to work with array indexes, so I built out an array containing 'n' indexes of empty space: " ".</p>
+                <p>My idea was to iterate the array from the end to the beginning, replacing each index with "#" using a loop.</p>
+                <p>Once the array has correct " " and "#" entries, join the array to a single string, formatting using \n at the beginning of each line.</p>
+                <p>Check out full code below!</p>
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Try It Out</h2>
                 <BuildStaircaseForm setStaircase={setStaircase} />
                 <div>
                     <h3>Staircase:</h3>
-                    <pre>
+                    <pre style={{marginLeft:'32px'}}>
                         {staircase}
                     </pre>
                 </div>

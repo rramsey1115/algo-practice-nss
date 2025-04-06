@@ -25,6 +25,7 @@ export const SumMultiplesView = () => {
                 <p>Next step was to decide to use an 'if' statement or shorthand, I opted for the short-circuiting logical AND expression since it is a pretty simple problem, which saved a few lines of code without becoming unreadable.</p>
                 <p>Next I used the modulus '%' operator to check if current number was evenly divisible by either of the given nums. If returned true to either condition, I added the current number to sum.</p>
                 <p>Final step, after loop has finished executing, return the sum!</p>
+                <p>Check out full code below!</p>
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Try It Out</h2>
