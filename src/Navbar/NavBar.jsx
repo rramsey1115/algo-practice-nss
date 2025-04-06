@@ -4,20 +4,7 @@ import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { Link } from 'react-router-dom';
-
-function samePageLinkNavigation(event) {
-  if (
-    event.defaultPrevented ||
-    event.button !== 0 || // ignore everything but left-click
-    event.metaKey ||
-    event.ctrlKey ||
-    event.altKey ||
-    event.shiftKey
-  ) {
-    return false;
-  }
-  return true;
-}
+import { useLocation } from 'react-router-dom';
 
 function LinkTab(props) {
   return (
@@ -30,23 +17,30 @@ function LinkTab(props) {
   );
 }
 
-
 LinkTab.propTypes = {
   selected: PropTypes.bool,
 };
 
 export const NavBar = () => {
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    // event.type can be equal to focus with selectionFollowsFocus.
-    if (
-      event.type !== 'click' ||
-      (event.type === 'click' && samePageLinkNavigation(event))
-    ) {
-      setValue(newValue);
-    }
+  const location = useLocation();
+  const pathToIndexMap = {
+    "/": 0,
+    "/multiples": 1,
+    "/staircase": 2,
+    "/buildings": 3,
+    "/farm": 4,
+    "/professor": 5,
+    "/stranded": 6,
+    "/numspal": 7,
+    "/wordspal": 8,
+    "/arcade": 9,
+    "/freqfrenzy": 10,
+    "/prodsums": 11,
+    "/prodmatching": 12,
   };
+
+  const currentPath = location.pathname;
+  const value = pathToIndexMap[currentPath] ?? false; // false = no tab selected if path doesn't match
 
   return (
     <Box
@@ -70,7 +64,6 @@ export const NavBar = () => {
     >
       <Tabs
         value={value}
-        onChange={handleChange}
         variant='scrollable'
         scrollButtons={true}
         allowScrollButtonsMobile
@@ -103,7 +96,6 @@ export const NavBar = () => {
             color: 'whitesmoke',
           }
         }}
-
       >
         <LinkTab label="Home" to="/" />
         <LinkTab label="Sum of Multiples" to="/multiples" />

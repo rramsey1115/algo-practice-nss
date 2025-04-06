@@ -1,0 +1,20 @@
+/* styles for forms - 1st used in sumOfMultiples */
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    flex-wrap: wrap;
+}
+
+.form-buttons {
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 16px;
+}
+
+#result-header {
+    margin: 16px 16px;
+}
