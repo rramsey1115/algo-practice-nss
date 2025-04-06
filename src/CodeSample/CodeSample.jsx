@@ -8,7 +8,7 @@ export const CodeSample = ({ codeString }) => {
         customStyle={{
             borderRadius: '12px',
             padding: '8px',
-            fontSize: '12px'
+            fontSize: '14px'
         }}
     >
         {codeString}
