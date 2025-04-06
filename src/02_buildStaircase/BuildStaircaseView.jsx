@@ -59,7 +59,7 @@ export const BuildStaircaseView = () => {
                 <h2 className="article-heading">Try It Out</h2>
                 <BuildStaircaseForm setStaircase={setStaircase} />
                 <div>
-                    <h3>Staircase:</h3>
+                    <h4>Staircase:</h4>
                     <pre style={{marginLeft:'32px'}}>
                         {staircase}
                     </pre>
