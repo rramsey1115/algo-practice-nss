@@ -1,4 +1,12 @@
+
+import { useState } from "react";
+import { BuildStaircaseForm } from "./BuildStaircaseForm";
+import { CodeSample } from "../CodeSample/CodeSample";
+import { buildStaircaseAlgoString } from "./BuildStaircaseAlgo";
+
 export const BuildStaircaseView = () => {
+    const [staircase, setStaircase] = useState('');
+
     return (<>
         <header className="header">
             <h1 className="header-heading">Build a Staircase</h1>
@@ -24,9 +32,9 @@ export const BuildStaircaseView = () => {
                 <h4><u>Function Constraints</u></h4>
                 <p>The number specified for height and width should be greater than 0 and less than 100.</p>
                 <h4><u>Output Format</u></h4>
-                <p>Print a staircase of size <em>n</em> using <code>#</code> symbols and spaces.</p>
+                <p>Print a staircase of size <em>n</em> using # symbols and spaces.</p>
                 <h4><u>Sample Input</u></h4>
-                <pre>6</pre>
+                6
                 <h4><u>Sample Output</u></h4>
                 <pre>
                     {`
@@ -40,7 +48,7 @@ export const BuildStaircaseView = () => {
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Approach</h2>
-                <p></p>
+                <p>My first impression is to make this interactive, so that the user controls the 'n' number input. This also means instead of printing to console, I will contruct my function to return the outcome to the DOM.</p>
                 <p></p>
                 <p></p>
                 <p></p>
@@ -49,9 +57,17 @@ export const BuildStaircaseView = () => {
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Try It Out</h2>
+                <BuildStaircaseForm setStaircase={setStaircase} />
+                <div>
+                    <h3>Staircase:</h3>
+                    <pre>
+                        {staircase}
+                    </pre>
+                </div>
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Algorithmic Solution</h2>
+                <CodeSample codeString={buildStaircaseAlgoString} />
             </div>
         </article>
     </>)
