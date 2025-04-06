@@ -25,7 +25,7 @@ console.log(sumOfMultiplesAlgo(3, 5, 10));
 
 
 // code string which is imported to the view JSX file to display to user
-export const codeString = `
+export const sumMultiplesCodeString = `
 const sumOfMultiplesAlgo = (num1, num2, range) => {
     let sum = 0;
     // iterate from 1 to range (not inclusive)

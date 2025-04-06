@@ -1,8 +1,7 @@
 import "../styles/AlgoViews.css"
-import { codeString } from "./sumMultiplesAlgo";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { nightOwl } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { SumMultiplesForm } from "./sumMultiplesForm";
+import { CodeSample } from "../CodeSample/CodeSample";
+import { sumMultiplesCodeString } from "./sumMultiplesAlgo";
 
 export const SumMultiplesView = () => {
     return (<>
@@ -35,17 +34,7 @@ export const SumMultiplesView = () => {
             <div className="article-div">
                 <h2 className="article-heading">Algorithmic Solution</h2>
                 <p><em>See the JavaScript code that implements the logic described above</em></p>
-                <SyntaxHighlighter
-                    language="javascript"
-                    style={nightOwl}
-                    customStyle={{
-                        borderRadius: '12px',
-                        padding: '8px',
-                        fontSize: '12px'
-                    }}
-                >
-                    {codeString}
-                </SyntaxHighlighter>
+                <CodeSample codeString={sumMultiplesCodeString} />
             </div>
         </article>
     </>)

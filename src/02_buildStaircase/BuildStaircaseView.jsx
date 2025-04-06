@@ -6,9 +6,22 @@ export const BuildStaircaseView = () => {
         <article className="article">
             <div className="article-div">
                 <h2 className="article-heading">Challenge</h2>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Approach</h2>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Try It Out</h2>
