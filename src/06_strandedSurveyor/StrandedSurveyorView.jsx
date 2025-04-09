@@ -1,4 +1,7 @@
+import { strandedSurveyorAlgoString } from "./strandedSurveyorAlgo"
 import { StrandedSurveyorForm } from "./StrandedSurveyorForm"
+import { CodeSample } from "../CodeSample/CodeSample.jsx"
+import { Collapse } from "@mui/material"
 
 export const StrandedSurveyorView = () => {
     return (<>
@@ -13,12 +16,10 @@ export const StrandedSurveyorView = () => {
                     To accurately calculate its position in space, safely align its nuclear drive, and continue on its journey,
                     you need to determine its fuel requirements.
                 </p>
-
                 <p>
                     <strong>Fuel required</strong> to power a given module is based on its mass.
                     Specifically, to find the fuel required for a module, take its mass, divide by three, round down, and subtract 2.
                 </p>
-
                 <h4>Examples:</h4>
                 <ul>
                     <li>Mass of 12 →<strong> 2 fuel</strong></li>
@@ -26,12 +27,10 @@ export const StrandedSurveyorView = () => {
                     <li>Mass of 1969 →<strong> 654 fuel</strong></li>
                     <li>Mass of 100756 →<strong> 33583 fuel</strong></li>
                 </ul>
-
                 <p>
                     The Fuel Management team for the project needs to know the <strong>total fuel requirement</strong>.
                     To find it, individually calculate the fuel needed for the mass of each module, then <em>add together all the fuel values</em>.
                 </p>
-
                 <h4>Module Masses on Surveyor:</h4>
                 <pre style={{
                     backgroundColor: '#222',
@@ -57,13 +56,30 @@ export const StrandedSurveyorView = () => {
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Approach</h2>
+                <p>
+                    I built two options: one for calculating the Surveyor spacecraft's fuel needs using the provided module data, and one for creating custom fuel calculations. The UI updates dynamically based on the user's selection.
+                </p>
+                <p>
+                    Choosing “Surveyor” immediately displays the total fuel required. If the user opts for a custom calculation, they can enter module weights one by one. The app keeps track of the number of modules and their combined weight.
+                </p>
+                <p>
+                    Once the user triggers the calculation, the algorithm runs on the selected data set.
+                </p>
+                <p>
+                    The algorithm itself is straightforward—it follows the word problem exactly, using basic math and order of operations (think PEMDAS). The only code-specific method involved is <code>Math.floor()</code>, which rounds down to the nearest whole number.
+                </p>
+                <p>
+                    The biggest challenge wasn’t the logic—it was managing all the different states in the UI! But overall, this was a fun and simple problem to bring to life.
+                </p>
+                <p>Check out the code below!</p>
             </div>
-            <div className="article-div">
+            <div className="article-div" style={{ transition: 'all 0.5s ease-in-out' }}>
                 <h2 className="article-heading">Try It Out</h2>
                 <StrandedSurveyorForm />
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Solution</h2>
+                <CodeSample codeString={strandedSurveyorAlgoString} />
             </div>
         </article>
     </>)
