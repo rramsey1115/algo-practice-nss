@@ -1,3 +1,7 @@
+import { FreqDupForm } from "./FreqDupForm.jsx";
+import { CodeSample } from "../CodeSample/CodeSample.jsx";
+import { freqDupAlgoString } from "./freqDupAlgo.js";
+
 export const FreqDupView = () => {
     return (<>
         <header className="header">
@@ -29,12 +33,18 @@ export const FreqDupView = () => {
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Approach</h2>
+                <p>The data for this challenge is copied from the previous, with new algorithm to solve more complex problem.</p>
+                <p>First challenge was to iterate the array of values repeatedly from beginning to end until duplicate is found. I accomplished this by using an interator count variable which I manually incremented until it reached the array length, then rest back to 0.</p>
+                <p>This iteration was placed inside of a while loop, to continuously iterate until duplicate was found, which exited while loop.</p>
+                <p>Inside the while loop, I constructed a table to store key/value pairs, if the key value for our current frequency total was already present in the table, it means it is a duplicate. At that point, exit the loop and return the current frequency total!</p>
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Try It Out</h2>
+                <FreqDupForm />
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Solution</h2>
+                <CodeSample codeString={freqDupAlgoString} />
             </div>
         </article>
     </>)
