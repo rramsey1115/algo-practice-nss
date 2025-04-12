@@ -35,8 +35,9 @@ export const NavBar = () => {
     "/wordspal": 8,
     "/arcade": 9,
     "/freqfrenzy": 10,
-    "/prodsums": 11,
-    "/prodmatching": 12,
+    "/freqduplicates": 11,
+    "/prodsums": 12,
+    "/prodmatching": 13,
   };
 
   const currentPath = location.pathname;
@@ -108,6 +109,7 @@ export const NavBar = () => {
         <LinkTab label="Words Palindrome" to="/wordspal" />
         <LinkTab label="Arcade Elite" to="/arcade" />
         <LinkTab label="Frequency Frenzy" to="/freqfrenzy" />
+        <LinkTab label="Frequency Duplicates" to="/freqduplicates" />
         <LinkTab label="Product Check Sums" to="/prodsums" />
         <LinkTab label="Product Matching" to="/prodmatching" />
       </Tabs>
