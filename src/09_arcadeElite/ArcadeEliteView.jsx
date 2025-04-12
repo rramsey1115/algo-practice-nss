@@ -85,6 +85,19 @@ currentPlayerGameScores = [ 280, 400, 500 ]`}
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Approach</h2>
+                <p>For this challenge, I wanted users to be allowed to enter their scores one at a time to a list, which will then be calculated in the manner laid out in the instructions.</p>
+                <p>In the algorithm, I decided to return an object containing the updated list of high scores for the leaderboard, as well as the array of scores the user added to the leaderboard, as the instructions ask.</p>
+                <p>The basic steps the algo function takes are:</p>
+                <ul>
+                    <li>Check if valid inputs</li>
+                    <li>Concat previous top scores and new scores arrays together, sorted descending</li>
+                    <li>Create an object to group scores by their value (used to detect ties)</li>
+                    <li>Extract top 5 unique scores, sorted descending order</li>
+                    <li>Build an object of ranked groups of scores (including ties)</li>
+                    <li>Check if any of the new top 5 scores were submitted by the user input. If so, add that score to the array of new top scores to return.</li>
+                    <li>Flatten the nested array (ties) to retun to user.</li>
+                </ul>
+                <p>Important to point out that there is a separate component taking the flattened array of top scores and converting it to grouped scores for the leaderboard UI. This updates each time new scores are submitted.</p>
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Try It Out</h2>
