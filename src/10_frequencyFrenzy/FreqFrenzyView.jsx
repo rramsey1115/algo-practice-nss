@@ -1,3 +1,7 @@
+import { freqFrenzyAlgoString } from "./freqFrenzyAlgo"
+import { FreqFrenzyForm } from "./FreqFrenzyForm"
+import { CodeSample } from "../CodeSample/CodeSample.jsx"
+
 export const FreqFrenzyView = () => {
     return (<>
         <header className="header">
@@ -54,12 +58,16 @@ export const FreqFrenzyView = () => {
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Approach</h2>
+                <p>This one is very simple, so I followed the KISS method!</p>
+                <p>Create a running sum variable, loop through each number in the given array, add or subtract to running sum based on value in array, return result at the end.</p>
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Try It Out</h2>
+                <FreqFrenzyForm />
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Solution</h2>
+                <CodeSample codeString={freqFrenzyAlgoString} />
             </div>
         </article>
     </>)
