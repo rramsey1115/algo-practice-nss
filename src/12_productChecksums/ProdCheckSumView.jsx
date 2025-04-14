@@ -46,6 +46,16 @@ export const ProdCheckSumView = () => {
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Approach</h2>
+                <p>The current challenge provided a large dataset to analyze, so the user does not have ability to enter their won info for this challenge. I felt there was enough in the algorithm to not over-complicate things. I have several examples of forms handling user inputs in earlier challenges!</p>
+                <p>The steps I took to solving this problem:</p>
+                <ul>
+                    <li>Check that data is valid</li>
+                    <li>Create a 'store' object to store two numbers needed to multiply at the end to find product.</li>
+                    <li>Iterate array of prodId's and perform a check function on each entry.</li>
+                    <li>Check function finds out if current Id contains letters repeated exactly 2 times AND exactly 3 times. This process used an object, storing keys of letters used and values or how many times this letter repeats. Then if any letter repeats exactly 2 times, add 1 to my store for 2's. If any letter repeats exactly 3 times, add 1 to my store for 3's.</li>
+                    <li>After check has compiled 2's and 3's for all items in array, multiply the value of 2's and 3's within the store object to get the final product.</li>
+                </ul>
+                <p>The primary challenge here was in using objects to store key/value pairs to track duplicate letters within in id.</p>
             </div>
             <div className="article-div">
                 <h2 className="article-heading">Try It Out</h2>

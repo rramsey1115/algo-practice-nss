@@ -48,11 +48,8 @@ export const prodCheckSumAlgo = (array) => {
         check(prodId);
     });
 
-    console.log("store = ", store)
     // multiple the values of the store to get product
     let product = store.passes2 * store.passes3;
-
-    console.log("product", product);
 
     // return product
     return product;
@@ -109,11 +106,8 @@ const prodCheckSumAlgo = (array) => {
         check(prodId);
     });
 
-    console.log("store = ", store)
     // multiple the values of the store to get product
     let product = store.passes2 * store.passes3;
-
-    console.log("product", product);
 
     // return product
     return product;
