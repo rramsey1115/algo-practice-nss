@@ -1,0 +1,24 @@
+instructions = """
+🐉 Dragon Flight Plans
+
+Story:
+You’re the royal sky mapper for a kingdom of dragons. Each dragon gives you its planned flight distance in miles. The Dragon Council needs to know which two dragons are planning trips that sum to exactly the same as the king’s dragon’s route, so they can avoid airspace collisions.
+
+Challenge:
+You’re given:
+- An array of flight distances (positive integers).
+- A target distance (the king’s route).
+Return the first pair of distances that add up to the target. If none, return "No collisions".
+
+Example:
+dragonFlights([120, 340, 560, 230, 450], 670)
+// ➝ [120, 550] or [230, 440], depending on input
+
+Twist Options:
+- Return the indices of the pair instead of values.
+- Use a set for O(n) lookup.
+- Animate dragons flying and “crashing” if found.
+
+Bonus Visual:
+Dragons fly across a map from left to right. If two are on a crash course (their distances sum to the king’s), they glow red and crash. Otherwise, the king flies alone.
+"""

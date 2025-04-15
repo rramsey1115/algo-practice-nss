@@ -13,6 +13,7 @@ import { FreqFrenzyView } from './10_frequencyFrenzy/FreqFrenzyView.jsx'
 import { FreqDupView } from "./11_frequencyDuplicates/FreqDupView.jsx"
 import { ProdCheckSumView } from './12_productChecksums/ProdCheckSumView'
 import { ProdMatchingView } from './13_productMatching/ProdMatchingView'
+import { DragonFlightView } from './15_dragonFlight/DragonFlightView.jsx'
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
         <Route path='/numspal' element={<NumPalView />} />
         <Route path='/wordspal' element={<WordsPalView />} />
         <Route path='/arcade' element={<ArcadeEliteView />} />
+        <Route path='/dragon' element={<DragonFlightView />} />
         <Route path='/freqfrenzy' element={<FreqFrenzyView />} />
         <Route path='/freqduplicates' element={<FreqDupView />} />
         <Route path='/prodsums' element={<ProdCheckSumView />} />
